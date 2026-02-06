@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>kya aap treditional day pe jana chahte he</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background: #f9f9f9;
+    }
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #message {
+      margin-top: 30px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Traditional Day Attendance</h1>
+  <p>Choose if you want to attend:</p>
+  
+  <!-- One option button -->
+  <button onclick="showMessage()">શું તમે treditional day ઉજવવા ચાહો છો </button>
+  
+  <!-- Message area -->
+  <div id="message"></div>
+  
+  <script>
+    function showMessage() {
+      document.getElementById("message").innerText = 
+        "આ બધુ કરવા કરતાં થોડું ભણી લેવાઈ એવું લાગે છે, પરંતુ જો તમે આવવા માંગો છો તો અમે તમને ખૂબ જ ખુશીથી આવકારીએ છીએ!";
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+<div id="qrcode"></div>
+
+<script>
+new QRCode(document.getElementById("qrcode"), {
+    text: window.location.href,
+    width: 200,
+    height: 200
+});
+</script>
+</body>
+</html>
